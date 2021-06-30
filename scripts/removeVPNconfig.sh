@@ -1,6 +1,6 @@
 #!/bin/bash
 #purpose: this script was created to remove users vpn configuration profiles from the Jamf Pro server after the company has begun the offboarding process.
-#Each vpn config profile name follows this syntax - "VPN - Firstname Lastname". This can placed in Self Service scoped ONLY to the IT department.  
+#Each vpn config profile name follows this syntax - "VPN - Firstname Lastname". This can placed in Self Service scoped ONLY to the IT department to use.  
 
 ##API Call Info
 jamfProURL="https://jss.companyname.com/JSSResource"
