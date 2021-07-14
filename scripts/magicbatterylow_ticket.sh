@@ -11,7 +11,7 @@ serialNumber=$(system_profiler SPHardwareDataType | awk '/Serial/ {print $4}')
 #get computer room computer is in using jamf api
 room=$(curl -s -H "Authorization: Basic_Token_Goes_Here" -H "accept: application/xml" https://jss.company.com:8443/JSSResource/computers/serialnumber/$serialNumber -X GET | xmllint --xpath '/computer/location/room/text()' -)
 #get building computer is in using jamf api
-building=$(curl -s -H "Authorization: Basic YXBpOkBwITIwNDA=" -H "accept: application/xml" https://jss.company.com:8443/JSSResource/computers/serialnumber/$serialNumber -X GET | xmllint --xpath '/computer/location/building/text()' -)
+building=$(curl -s -H "Authorization: Basic_Token_Goes_Here " -H "accept: application/xml" https://jss.company.com:8443/JSSResource/computers/serialnumber/$serialNumber -X GET | xmllint --xpath '/computer/location/building/text()' -)
 #samanage ticket description 
 keymessage="REPLACE KEYBOARD BATTERIES ASAP"
 mousemessage="REPLACE MOUSE BATTERIES ASAP"
